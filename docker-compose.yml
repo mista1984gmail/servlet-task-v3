@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+
+  service-db:
+    image: postgres:14.7-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "15432:5432"
+    volumes:
+      - ./infrastructure/db/create_db.sql:/docker-entrypoint-initdb.d/create_db.sql
+    restart: unless-stopped
