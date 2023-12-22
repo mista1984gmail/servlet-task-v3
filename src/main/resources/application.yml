@@ -1,0 +1,7 @@
+cache_size: 3
+cache_type: LRU
+database_driver: org.postgresql.Driver
+database_url: jdbc:postgresql://localhost:15432/client_database
+database_username: postgres
+database_password: admin
+liquibase_enabled: true
